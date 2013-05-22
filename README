@@ -8,3 +8,10 @@ Libraries used:
 				MySQLdb
 				redis
 				sys
+				os
+
+How to Run :
+-----------
+				sh automaticscript.sh	; Run Script for creating database and table
+				python redisapp.py		; Running python code
+	
