@@ -6,16 +6,16 @@ con=None
 
 try:
 
-    con=mdb.connect('localhost', 'testuser','test623', 'bookstore')
+    con=mdb.connect('localhost', 'testuser','test623', 'tio')
     cur=con.cursor()
-    cur.execute("select * from books")
+    cur.execute("select * from student")
     data=cur.fetchall()
     r_server = redis.Redis("localhost")
     k=len(data)
     for i in xrange(k):
-        r_server.rpush("books",data[i])
-    print r_server.lrange("books",0,-1)
-    r_server.delete("books")
+        r_server.rpush("students",data[i])
+    print r_server.lrange("students",0,-1)
+    r_server.delete("students")
     
 except mdb.Error,e:
     
