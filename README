@@ -1,0 +1,10 @@
+A simple application that pulls records from a mysql database and places it on a queue .
+
+Language Used : 
+--------------
+				Python
+Libraries used:
+---------------
+				MySQLdb
+				redis
+				sys
